@@ -132,3 +132,4 @@
 /home/thabo-lubhele/Desktop/AssetLogMicroservices/backend/AssignmentService/obj/Debug/net8.0/AssignmentService.pdb
 /home/thabo-lubhele/Desktop/AssetLogMicroservices/backend/AssignmentService/obj/Debug/net8.0/AssignmentService.genruntimeconfig.cache
 /home/thabo-lubhele/Desktop/AssetLogMicroservices/backend/AssignmentService/obj/Debug/net8.0/ref/AssignmentService.dll
+/home/thabo-lubhele/Desktop/AssetLogMicroservices/backend/AssignmentService/obj/Debug/net8.0/AssignmentService.sourcelink.json

@@ -47,6 +47,7 @@ The services currently exchange identifiers through API payloads (`AssetId` and 
 ## Prerequisites
 
 - .NET 8 SDK
+- Docker Desktop or Docker Engine
 - Postman, if you want to repeat the API test workflow
 
 ## Run Locally
@@ -75,6 +76,69 @@ The services use these default development addresses:
 - User API: `http://localhost:5182`
 
 On first startup, each service creates its SQLite database if it does not already exist. The solution file is `backend/AssetLog Microservices.sln` and can also be opened in Visual Studio or VS Code.
+
+## Run with Docker
+
+Build an image for each service from its service directory:
+
+```bash
+cd backend/AssetService
+docker build -t asset-service .
+
+cd ../AssignmentService
+docker build -t assignment-service .
+
+cd ../UserService
+docker build -t user-service .
+```
+
+Run the containers with the same host ports used by local development. The
+Dockerfiles expose port `8080` inside each container:
+
+```bash
+docker run -d --name asset-service-container -p 5209:8080 asset-service
+docker run -d --name assignment-service-container -p 5135:8080 assignment-service
+docker run -d --name user-service-container -p 5182:8080 user-service
+```
+
+Useful Docker commands:
+
+```bash
+docker ps
+docker logs asset-service-container
+docker stop asset-service-container assignment-service-container user-service-container
+docker rm asset-service-container assignment-service-container user-service-container
+```
+
+The SQLite database files created inside the containers are removed when the
+containers are removed. Add Docker volumes before using this setup for data
+that must survive container recreation.
+
+## Commit and Push Changes
+
+Check the files that will be committed, then stage and commit the project:
+
+```bash
+git status
+git add .
+git commit -m "Add Docker support for microservices"
+```
+
+If this repository does not have a remote yet, create one on GitHub or GitLab
+and replace the URL below with its HTTPS or SSH URL:
+
+```bash
+git remote add origin https://github.com/<your-username>/<your-repository>.git
+git push -u origin master
+```
+
+For later changes, use:
+
+```bash
+git add .
+git commit -m "Describe the change"
+git push
+```
 
 ## REST API
 

@@ -132,3 +132,4 @@
 /home/thabo-lubhele/Desktop/AssetLogMicroservices/backend/AssetService/obj/Debug/net8.0/AssetService.pdb
 /home/thabo-lubhele/Desktop/AssetLogMicroservices/backend/AssetService/obj/Debug/net8.0/AssetService.genruntimeconfig.cache
 /home/thabo-lubhele/Desktop/AssetLogMicroservices/backend/AssetService/obj/Debug/net8.0/ref/AssetService.dll
+/home/thabo-lubhele/Desktop/AssetLogMicroservices/backend/AssetService/obj/Debug/net8.0/AssetService.sourcelink.json

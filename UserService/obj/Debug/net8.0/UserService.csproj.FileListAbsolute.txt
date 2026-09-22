@@ -132,3 +132,4 @@
 /home/thabo-lubhele/Desktop/AssetLogMicroservices/backend/UserService/obj/Debug/net8.0/UserService.pdb
 /home/thabo-lubhele/Desktop/AssetLogMicroservices/backend/UserService/obj/Debug/net8.0/UserService.genruntimeconfig.cache
 /home/thabo-lubhele/Desktop/AssetLogMicroservices/backend/UserService/obj/Debug/net8.0/ref/UserService.dll
+/home/thabo-lubhele/Desktop/AssetLogMicroservices/backend/UserService/obj/Debug/net8.0/UserService.sourcelink.json
