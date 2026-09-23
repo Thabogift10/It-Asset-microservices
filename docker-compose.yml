@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  user-service:
+    build:
+      context: ./UserService
+      dockerfile: Dockerfile
+    image: user-service
+    container_name: user-service
+    ports:
+      - "5142:8080"
+    volumes:
+      - user_data:/app
+
+  asset-service:
+    build:
+      context: ./AssetService
+      dockerfile: Dockerfile
+    image: asset-service
+    container_name: asset-service
+    ports:
+      - "5143:8080"
+    volumes:
+      - asset_data:/app
+
+  assignment-service:
+    build:
+      context: ./AssignmentService
+      dockerfile: Dockerfile
+    image: assignment-service
+    container_name: assignment-service
+    ports:
+      - "5144:8080"
+    volumes:
+      - assignment_data:/app
+
+volumes:
+  user_data:
+  asset_data:
+  assignment_data:
